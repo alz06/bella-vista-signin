@@ -42,13 +42,19 @@ body {
     margin-bottom: 8px;
 }
 
-.field-group input {
+.field-group input,
+.dropdown {
     width: 100%;
     padding: 14px;
     font-size: 18px;
     border: 1px solid #cfcfcf;
     border-radius: 8px;
     box-sizing: border-box;
+    background: white;
+}
+
+.no-bottom {
+    margin-bottom: 0;
 }
 
 .question-card {

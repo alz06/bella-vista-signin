@@ -11,17 +11,17 @@ from psycopg.rows import dict_row
 load_dotenv()
 
 app = Flask(__name__)
-
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "dev-secret-change-this")
+
 DATABASE_URL = os.getenv("DATABASE_URL")
 ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
 ADMIN_PASSWORD_HASH = os.getenv("ADMIN_PASSWORD_HASH")
 
 if not DATABASE_URL:
-    raise RuntimeError("DATABASE_URL is not set in .env")
+    raise RuntimeError("DATABASE_URL is not set in .env or Render environment variables.")
 
 if not ADMIN_PASSWORD_HASH:
-    raise RuntimeError("ADMIN_PASSWORD_HASH is not set in .env")
+    raise RuntimeError("ADMIN_PASSWORD_HASH is not set in .env or Render environment variables.")
 
 
 def get_conn():
@@ -162,8 +162,10 @@ def admin():
             visitors = cur.fetchall()
 
     return render_template("admin.html", visitors=visitors)
-    
+
+
+with app.app_context():
+    init_db()
 
 if __name__ == "__main__":
-    init_db()
     app.run(debug=True)
