@@ -14,7 +14,7 @@
             <p>Please complete the form below before touring the home.</p>
         </div>
 
-        <form method="POST" class="guest-form">
+        <form method="POST">
             <div class="field-group">
                 <label for="visit_date">Date</label>
                 <input type="date" id="visit_date" name="visit_date" value="{{ today }}">
@@ -43,42 +43,24 @@
             <div class="question-card">
                 <p class="question-title">Are you an agent or buyer?</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="visitor_role" value="Agent">
-                        <span>Agent</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="visitor_role" value="Buyer">
-                        <span>Buyer</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="visitor_role" value="Agent"><span>Agent</span></label>
+                    <label class="choice-box"><input type="radio" name="visitor_role" value="Buyer"><span>Buyer</span></label>
                 </div>
             </div>
 
             <div class="question-card">
                 <p class="question-title">Are you currently working with an agent?</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="working_with_agent" value="Yes">
-                        <span>Yes</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="working_with_agent" value="No">
-                        <span>No</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="working_with_agent" value="Yes"><span>Yes</span></label>
+                    <label class="choice-box"><input type="radio" name="working_with_agent" value="No"><span>No</span></label>
                 </div>
             </div>
 
             <div class="question-card">
                 <p class="question-title">Are you pre-approved?</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="preapproved" value="Yes">
-                        <span>Yes</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="preapproved" value="No">
-                        <span>No</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="preapproved" value="Yes"><span>Yes</span></label>
+                    <label class="choice-box"><input type="radio" name="preapproved" value="No"><span>No</span></label>
                 </div>
             </div>
 
@@ -90,126 +72,63 @@
             <div class="question-card">
                 <p class="question-title">1. I presently:</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="presently" value="Rent">
-                        <span>Rent</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="presently" value="Own">
-                        <span>Own</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="presently" value="Rent"><span>Rent</span></label>
+                    <label class="choice-box"><input type="radio" name="presently" value="Own"><span>Own</span></label>
                 </div>
             </div>
 
             <div class="question-card">
                 <p class="question-title">2. I need to sell a home to purchase another:</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="need_to_sell" value="Yes">
-                        <span>Yes</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="need_to_sell" value="No">
-                        <span>No</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="need_to_sell" value="Yes"><span>Yes</span></label>
+                    <label class="choice-box"><input type="radio" name="need_to_sell" value="No"><span>No</span></label>
                 </div>
             </div>
 
             <div class="question-card">
                 <p class="question-title">3. Will this be for a primary residence or investment:</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="purchase_type" value="Primary Residence">
-                        <span>Primary Residence</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="purchase_type" value="Investment Property">
-                        <span>Investment Property</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="purchase_type" value="Primary Residence"><span>Primary Residence</span></label>
+                    <label class="choice-box"><input type="radio" name="purchase_type" value="Investment Property"><span>Investment Property</span></label>
                 </div>
             </div>
 
             <div class="question-card">
                 <p class="question-title">4. Family members in household:</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="household_size" value="1-2">
-                        <span>1-2</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="household_size" value="3-4">
-                        <span>3-4</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="household_size" value="5+">
-                        <span>5+</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="household_size" value="1-2"><span>1-2</span></label>
+                    <label class="choice-box"><input type="radio" name="household_size" value="3-4"><span>3-4</span></label>
+                    <label class="choice-box"><input type="radio" name="household_size" value="5+"><span>5+</span></label>
                 </div>
             </div>
 
             <div class="question-card">
                 <p class="question-title">5. I would like to purchase a new home:</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="purchase_timeline" value="1-3 months">
-                        <span>1-3 months</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="purchase_timeline" value="3-6 months">
-                        <span>3-6 months</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="purchase_timeline" value="6-12 months">
-                        <span>6-12 months</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="purchase_timeline" value="1-3 months"><span>1-3 months</span></label>
+                    <label class="choice-box"><input type="radio" name="purchase_timeline" value="3-6 months"><span>3-6 months</span></label>
+                    <label class="choice-box"><input type="radio" name="purchase_timeline" value="6-12 months"><span>6-12 months</span></label>
                 </div>
             </div>
 
             <div class="question-card">
                 <p class="question-title">6. How many bedrooms do you need/want:</p>
                 <div class="options-row">
-                    <label class="choice-box">
-                        <input type="radio" name="bedrooms_needed" value="3">
-                        <span>3</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="bedrooms_needed" value="4">
-                        <span>4</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="bedrooms_needed" value="5">
-                        <span>5</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="bedrooms_needed" value="3"><span>3</span></label>
+                    <label class="choice-box"><input type="radio" name="bedrooms_needed" value="4"><span>4</span></label>
+                    <label class="choice-box"><input type="radio" name="bedrooms_needed" value="5"><span>5</span></label>
                 </div>
             </div>
 
             <div class="question-card">
                 <p class="question-title">7. How did you hear about us?</p>
                 <div class="options-grid">
-                    <label class="choice-box">
-                        <input type="radio" name="heard_about_us" value="Signs">
-                        <span>Signs</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="heard_about_us" value="Friends/Referral">
-                        <span>Friends/Referral</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="heard_about_us" value="Social Media">
-                        <span>Social Media</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="heard_about_us" value="Website">
-                        <span>Website</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="heard_about_us" value="Agent">
-                        <span>Agent</span>
-                    </label>
-                    <label class="choice-box">
-                        <input type="radio" name="heard_about_us" value="Other">
-                        <span>Other</span>
-                    </label>
+                    <label class="choice-box"><input type="radio" name="heard_about_us" value="Signs"><span>Signs</span></label>
+                    <label class="choice-box"><input type="radio" name="heard_about_us" value="Friends/Referral"><span>Friends/Referral</span></label>
+                    <label class="choice-box"><input type="radio" name="heard_about_us" value="Social Media"><span>Social Media</span></label>
+                    <label class="choice-box"><input type="radio" name="heard_about_us" value="Website"><span>Website</span></label>
+                    <label class="choice-box"><input type="radio" name="heard_about_us" value="Agent"><span>Agent</span></label>
+                    <label class="choice-box"><input type="radio" name="heard_about_us" value="Other"><span>Other</span></label>
                 </div>
 
                 <div class="field-group small-top">

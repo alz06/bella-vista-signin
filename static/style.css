@@ -109,7 +109,7 @@ body {
 
 .submit-btn {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 20px;
     background: #7b1f2a;
     color: white;
     padding: 14px 24px;
@@ -129,9 +129,30 @@ body {
     max-width: 700px;
 }
 
+.flash-error {
+    background: #fdeaea;
+    border: 1px solid #e2aaaa;
+    color: #7b1f2a;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    text-align: left;
+    margin-top: 20px;
+}
+
 .admin-container {
     max-width: 1600px;
     overflow-x: auto;
+}
+
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 table {

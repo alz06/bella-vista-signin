@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container admin-container">
-        <h1>Guest Registrations</h1>
+        <div class="admin-topbar">
+            <h1>Guest Registrations</h1>
+            <a href="{{ url_for('logout') }}" class="submit-btn">Log Out</a>
+        </div>
 
         <table>
             <thead>
@@ -37,25 +40,25 @@
             <tbody>
                 {% for v in visitors %}
                 <tr>
-                    <td>{{ v[0] }}</td>
-                    <td>{{ v[18] }}</td>
-                    <td>{{ v[1] }}</td>
-                    <td>{{ v[2] }}</td>
-                    <td>{{ v[3] }}</td>
-                    <td>{{ v[4] }}</td>
-                    <td>{{ v[5] }}</td>
-                    <td>{{ v[6] }}</td>
-                    <td>{{ v[7] }}</td>
-                    <td>{{ v[8] }}</td>
-                    <td>{{ v[9] }}</td>
-                    <td>{{ v[10] }}</td>
-                    <td>{{ v[11] }}</td>
-                    <td>{{ v[12] }}</td>
-                    <td>{{ v[13] }}</td>
-                    <td>{{ v[14] }}</td>
-                    <td>{{ v[15] }}</td>
-                    <td>{{ v[16] }}</td>
-                    <td>{{ v[17] }}</td>
+                    <td>{{ v.id }}</td>
+                    <td>{{ v.submitted_at }}</td>
+                    <td>{{ v.visit_date }}</td>
+                    <td>{{ v.full_name }}</td>
+                    <td>{{ v.address }}</td>
+                    <td>{{ v.phone }}</td>
+                    <td>{{ v.email }}</td>
+                    <td>{{ v.visitor_role }}</td>
+                    <td>{{ v.working_with_agent }}</td>
+                    <td>{{ v.preapproved }}</td>
+                    <td>{{ v.price_range }}</td>
+                    <td>{{ v.presently }}</td>
+                    <td>{{ v.need_to_sell }}</td>
+                    <td>{{ v.purchase_type }}</td>
+                    <td>{{ v.household_size }}</td>
+                    <td>{{ v.purchase_timeline }}</td>
+                    <td>{{ v.bedrooms_needed }}</td>
+                    <td>{{ v.heard_about_us }}</td>
+                    <td>{{ v.heard_about_us_other }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
